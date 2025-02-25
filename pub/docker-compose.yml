@@ -1,0 +1,5 @@
+services:
+  zmc:  # ZeroMQ Publisher
+    build: ./zmc
+    container_name: zmc
+    network_mode: host 

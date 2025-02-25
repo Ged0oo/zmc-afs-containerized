@@ -4,7 +4,7 @@ import zmq
 import os
 
 # Read ZMQ publisher address from environment variable
-ZMC_HOST = os.getenv("ZMC_HOST", "tcp://zmc:5555")
+ZMC_HOST = os.getenv("ZMC_HOST", "tcp://192.168.1.18:5555")
 
 # Setup ZeroMQ subscriber
 context = zmq.Context()
@@ -37,7 +37,7 @@ def send_data():
 
             # Send direction
             ser.write(char.encode())
-            time.sleep(0.1)
+            time.sleep(1)
 
             # Send angle
             ser.write(bytes([int(angle)]))
